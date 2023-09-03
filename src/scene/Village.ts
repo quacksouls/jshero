@@ -50,7 +50,6 @@ export default class Village extends Phaser.Scene {
     private collisionLayer!: Phaser.Tilemaps.TilemapLayer;
     private cursor!: Phaser.Types.Input.Keyboard.CursorKeys;
     private cherry!: Cherry;
-    private enterButton!: Phaser.Input.Keyboard.Key;
     private player!: Player;
 
     constructor() {
