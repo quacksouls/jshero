@@ -1,0 +1,51 @@
+{
+  "name": "jshero",
+  "version": "0.0.1",
+  "description": "Learn JavaScript to survive",
+  "license": "MIT",
+  "keywords": [
+    "game",
+    "JavaScript",
+    "Phaser",
+    "TypeScript"
+  ],
+  "author": {
+    "name": "Duck McSouls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quacksouls/jshero.git"
+  },
+  "homepage": "https://github.com/quacksouls/jshero.git",
+  "scripts": {
+    "dev": "parcel src/index.html -p 8080",
+    "devclean": "rm -rf .parcel-cache dist && parcel src/index.html -p 8080",
+    "build": "parcel build src/index.html --dist-dir dist",
+    "start": "parcel serve src/index.html -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "prettier --write ./src && eslint --fix ./src --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write ./src",
+    "lint": "eslint --fix ./src --ext .js,.jsx,.ts,.tsx"
+  },
+  "parcelCleanPaths": [
+    "dist"
+  ],
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.47.0",
+    "parcel": "^2.9.3",
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "parcel-reporter-static-files-copy": "^1.5.2",
+    "phaser": "^3.60.0",
+    "phaser3-rex-plugins": "^1.60.4",
+    "prettier": "^3.0.1",
+    "prettier-plugin-curly": "^0.1.2",
+    "process": "^0.11.10",
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "root": true,
+  "rules": {
+    //////////////////////////////////////////////////////////////////////
+    // JavaScript
+    //////////////////////////////////////////////////////////////////////
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "functions": "never",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "consistent-return": ["off"],
+    "curly": ["error", "all"],
+    "eqeqeq": ["error", "always"],
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 100,
+        "comments": 90,
+        "ignoreUrls": true
+      }
+    ],
+    "no-await-in-loop": ["off"],
+    "no-continue": ["off"],
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-extra-semi": ["off"],
+    "no-plusplus": ["off"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "semi-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "semi-style": ["error", "last"],
+    "yoda": ["error", "never"],
+    //////////////////////////////////////////////////////////////////////
+    // TypeScript
+    //////////////////////////////////////////////////////////////////////
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/member-delimiter-style": [
+      "warn",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        },
+        "multilineDetection": "brackets",
+        "overrides": {
+          "interface": {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            }
+          }
+        }
+      }
+    ]
+  }
+}
