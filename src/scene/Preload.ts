@@ -30,7 +30,7 @@ import TextureKey from "../const/TextureKey";
 /**
  * Load assets (art, music, etc.) prior to loading the first scene.
  */
-export default class Preloader extends Phaser.Scene {
+export default class Preload extends Phaser.Scene {
     constructor() {
         super({ key: SceneKey.preloader });
     }

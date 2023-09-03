@@ -29,7 +29,7 @@
  * SOFTWARE.
  */
 
-import Preloader from "./scene/Preloader";
+import Preload from "./scene/Preload";
 import Village from "./scene/Village";
 
 import PluginKey from "./const/plugin";
@@ -40,7 +40,7 @@ const GameConfig: Phaser.Types.Core.GameConfig = {
     width: Math.floor(window.innerWidth),
     height: Math.floor(window.innerHeight),
     parent: "game",
-    scene: [Preloader, Village],
+    scene: [Preload, Village],
     title: "jsHero",
     url: "https://github.com/quacksouls/jshero",
     version: "0.0.1",
