@@ -54,6 +54,7 @@ export default class Cherry extends Phaser.Physics.Arcade.Sprite {
         this.setDepth(VillageDepthKey.npc);
         this.body?.setSize(cherry_t.SCALE * cherry_t.WIDTH, cherry_t.SCALE * cherry_t.HEIGHT);
         this.setScale(cherry_t.SCALE);
+        this.setInteractive();
     }
 
     /**

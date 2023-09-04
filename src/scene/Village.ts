@@ -197,7 +197,6 @@ export default class Village extends Phaser.Scene {
                 Number(position.y),
                 TextureKey.cherry
             );
-            this.cherry.setInteractive();
         });
     }
 
