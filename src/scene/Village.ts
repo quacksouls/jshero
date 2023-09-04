@@ -26,6 +26,7 @@ import { Geom } from "phaser";
 
 import { camera_t } from "../const/camera";
 import { VillageDepthKey } from "../const/DepthKey";
+import { dialogueBox_t } from "../const/dialogue";
 import SceneKey from "../const/SceneKey";
 import TextureKey from "../const/TextureKey";
 import { world_t } from "../const/world";
@@ -71,14 +72,14 @@ export default class Village extends Phaser.Scene {
         this.cherry.on("pointerdown", () => {
             if (this.isPlayerCherryOverlap()) {
                 createTextBox(this, {
-                    x: 0,
-                    y: 600,
+                    x: dialogueBox_t.village.x,
+                    y: dialogueBox_t.village.y,
                     depth: VillageDepthKey.dialogue,
                     icon: TextureKey.cherry,
-                    scale: 3,
-                    wrapWidth: 500,
-                    fixedWidth: 656,
-                    fixedHeight: 123,
+                    scale: cherryDialogue.scale,
+                    wrapWidth: dialogueBox_t.village.wrapWidth,
+                    fixedWidth: dialogueBox_t.village.width,
+                    fixedHeight: dialogueBox_t.village.height,
                     title: cherryDialogue.title,
                 }).start(cherryDialogue.greet, 50);
             }

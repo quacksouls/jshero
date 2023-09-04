@@ -23,19 +23,17 @@
  */
 
 /**
- * Charlie Cherry's dialogue tree.
+ * Constants relating to dialogue boxes in various scenes.
  */
-export const cherryDialogue = Object.freeze({
+export const dialogueBox_t = Object.freeze({
     /**
-     * The scale of the icon inserted into the dialogue box.
+     * The Village scene.
      */
-    scale: 3,
-    /**
-     * Title of the dialogue box.
-     */
-    title: "Cherry",
-    //////////////////////////////////////////////////////////////////////
-    // Start of dialogue tree
-    //////////////////////////////////////////////////////////////////////
-    greet: "Hello. My name's Charlie Cherry. Nice to meet you.",
+    village: {
+        height: 123,
+        width: 656,
+        wrapWidth: 500,
+        x: 0,
+        y: 600,
+    },
 });
