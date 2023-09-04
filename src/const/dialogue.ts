@@ -36,11 +36,11 @@ export const dialogueBox_t = Object.freeze({
     /**
      * The Village scene.
      */
-    village: {
+    village: Object.freeze({
         height: 123,
         width: 656,
         wrapWidth: 500,
         x: 0,
         y: 600,
-    },
+    }),
 });
