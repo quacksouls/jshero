@@ -57,6 +57,14 @@ export default class Village extends Phaser.Scene {
     }
 
     /**
+     * Add collision for the map and other NPCs.
+     */
+    addCollision() {
+        this.physics.add.collider(this.player, this.collisionLayer);
+        this.physics.add.collider(this.player, this.cherry);
+    }
+
+    /**
      * Perform anything required to create the scene.  See the following page for more
      * details:
      *
@@ -65,9 +73,7 @@ export default class Village extends Phaser.Scene {
     create() {
         const map = this.loadMap();
         this.spawnCharacters(map);
-
-        this.physics.add.collider(this.player, this.collisionLayer);
-        this.physics.add.collider(this.player, this.cherry);
+        this.addCollision();
 
         this.cherry.on("pointerdown", () => {
             if (this.isPlayerCherryOverlap()) {
