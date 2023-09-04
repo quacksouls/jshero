@@ -201,7 +201,8 @@ export default class Village extends Phaser.Scene {
                 this,
                 Number(position.x),
                 Number(position.y),
-                TextureKey.cherry
+                TextureKey.cherry,
+                VillageDepthKey.npc
             );
         });
     }

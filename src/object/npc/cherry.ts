@@ -24,7 +24,6 @@
 
 import { anim_t, cherryAnim_t } from "../../const/anim";
 import { cherry_t } from "../../const/npc";
-import { VillageDepthKey } from "../../const/DepthKey";
 import NPC from "./npc";
 
 /**
@@ -38,6 +37,7 @@ export default class Cherry extends NPC {
      * @param x The initial x-coordinate of the sprite.
      * @param y The initial y-coordinate of the sprite.
      * @param texture The key for this texture.
+     * @param depth The depth at which to place Cherry in the scene.
      * @param frame See this page for more details:
      *     https://newdocs.phaser.io/docs/3.60.0/Phaser.Physics.Arcade.Sprite
      */
@@ -46,11 +46,12 @@ export default class Cherry extends NPC {
         x: number,
         y: number,
         texture: string,
+        depth: number,
         frame?: string | number
     ) {
         super(scene, x, y, texture, frame);
         this.anims.play(cherryAnim_t.idle, anim_t.IGNORE_IF_PLAYING);
-        this.setDepth(VillageDepthKey.npc);
+        this.setDepth(depth);
         this.body?.setSize(cherry_t.SCALE * cherry_t.WIDTH, cherry_t.SCALE * cherry_t.HEIGHT);
         this.setScale(cherry_t.SCALE);
     }
