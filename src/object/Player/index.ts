@@ -34,6 +34,9 @@ import { VillageDepthKey } from "../../const/DepthKey";
 import { player_t } from "../../const/player";
 import playerMovement from "./movement";
 
+/**
+ * The main player of the game.
+ */
 export default class Player extends Phaser.Physics.Arcade.Sprite {
     private movementState: number = player_t.movement.state.IDLE;
     private pushedTimer = 0;
@@ -93,6 +96,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     }
 
     /**
+     * Update the player's movement.
      *
      * @param delta The amount of time in milliseconds since the last frame.
      * @param cursor Either one of the arrow keys (UP, DOWN, LEFT, RIGHT) or one of these
