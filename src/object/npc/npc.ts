@@ -22,15 +22,12 @@
  * SOFTWARE.
  */
 
-import { anim_t, cherryAnim_t } from "../../const/anim";
-import { cherry_t } from "../../const/npc";
-import { VillageDepthKey } from "../../const/DepthKey";
-import NPC from "./npc";
+import { npc_t } from "../../const/npc";
 
 /**
- * The NPC Charlie Cherry.
+ * The base NPC class.
  */
-export default class Cherry extends NPC {
+export default class NPC extends Phaser.Physics.Arcade.Sprite {
     /**
      * Load and position the NPC sprite.
      *
@@ -49,16 +46,22 @@ export default class Cherry extends NPC {
         frame?: string | number
     ) {
         super(scene, x, y, texture, frame);
-        this.anims.play(cherryAnim_t.idle, anim_t.IGNORE_IF_PLAYING);
-        this.setDepth(VillageDepthKey.npc);
-        this.body?.setSize(cherry_t.SCALE * cherry_t.WIDTH, cherry_t.SCALE * cherry_t.HEIGHT);
-        this.setScale(cherry_t.SCALE);
+        scene.physics.add.existing(this, npc_t.IS_STATIC);
+        scene.add.existing(this);
+        const body = this.body as Phaser.Physics.Arcade.Body;
+        body.onCollide = true;
+        this.setInteractive();
     }
 
     /**
-     * Update the animation.  Called for every frame.
+     * Update the animation of the NPC sprite.  See this page for more details:
+     *
+     * https://newdocs.phaser.io/docs/3.60.0/focus/Phaser.Physics.Arcade.Sprite-preUpdate
+     *
+     * @param time Current time value.
+     * @param delta The amount of time in milliseconds since the last frame.
      */
-    update() {
-        this.anims.play(cherryAnim_t.idle, anim_t.IGNORE_IF_PLAYING);
+    preUpdate(time: number, delta: number) {
+        super.preUpdate(time, delta);
     }
 }
