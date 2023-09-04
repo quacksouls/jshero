@@ -52,6 +52,9 @@ export default class Village extends Phaser.Scene {
     private cherry!: Cherry;
     private player!: Player;
 
+    /**
+     * Instantiate the scene object.
+     */
     constructor() {
         super({ key: SceneKey.village });
     }
@@ -100,6 +103,11 @@ export default class Village extends Phaser.Scene {
         this.cameras.main.startFollow(this.player, camera_t.ROUND_PIXELS);
     }
 
+    /**
+     * Whether the player overlaps with Cherry.
+     *
+     * @returns True if the player overlaps with Cherry; false otherwise.
+     */
     isPlayerCherryOverlap() {
         return Geom.Intersects.RectangleToRectangle(
             this.player.getBounds(),
