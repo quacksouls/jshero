@@ -29,12 +29,11 @@ import { VillageDepthKey } from "../const/DepthKey";
 import SceneKey from "../const/SceneKey";
 import TextureKey from "../const/TextureKey";
 import { world_t } from "../const/world";
+import { cherryDialogue } from "../dialogue/village";
 import Cherry from "../object/npc/cherry";
 import Player from "../object/Player";
 import { debugDraw } from "../util/debug";
 import createTextBox from "../util/dialogue";
-
-const content = "Hello. My name's Charlie Cherry. Nice to meet you.";
 
 /**
  * The "Village" scene.  This is the player's hub area.  A typical Phaser scene is
@@ -80,8 +79,8 @@ export default class Village extends Phaser.Scene {
                     wrapWidth: 500,
                     fixedWidth: 656,
                     fixedHeight: 123,
-                    title: "Cherry",
-                }).start(content, 50);
+                    title: cherryDialogue.title,
+                }).start(cherryDialogue.greet, 50);
             }
         });
 
