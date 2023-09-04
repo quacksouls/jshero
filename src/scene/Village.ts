@@ -170,7 +170,7 @@ export default class Village extends Phaser.Scene {
                     fixedWidth: dialogueBox_t.village.width,
                     fixedHeight: dialogueBox_t.village.height,
                     title: cherryDialogue.title,
-                }).start(cherryDialogue.greet, 50);
+                }).start(cherryDialogue.greet, dialogueBox_t.SPEED);
             }
         });
     }

@@ -27,6 +27,13 @@
  */
 export const dialogueBox_t = Object.freeze({
     /**
+     * The typing speed in ms.
+     */
+    SPEED: 50,
+    //////////////////////////////////////////////////////////////////////
+    // Per scene constants
+    //////////////////////////////////////////////////////////////////////
+    /**
      * The Village scene.
      */
     village: {
