@@ -26,6 +26,9 @@ import { anim_t, cherryAnim_t } from "../../const/anim";
 import { cherry_t, npc_t } from "../../const/npc";
 import { VillageDepthKey } from "../../const/DepthKey";
 
+/**
+ * The NPC Charlie Cherry.
+ */
 export default class Cherry extends Phaser.Physics.Arcade.Sprite {
     /**
      * Load and position the NPC sprite.
